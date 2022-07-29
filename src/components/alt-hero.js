@@ -36,7 +36,7 @@ function Hero() {
               Learn more
             </a>
 
-            <a href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-white hover:bg-gray-100  focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-white dark:hover:bg-slate-800 dark:focus:ring-gray-800">
+            <a href="https://discord.gg/decentland" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-white hover:bg-gray-100  focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-white dark:hover:bg-slate-800 dark:focus:ring-gray-800">
               <img class="object-scale-down w-6 h-6 mr-2" src={Discord} />
               Join Discord
             </a>
