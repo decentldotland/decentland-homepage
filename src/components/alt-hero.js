@@ -22,9 +22,9 @@ function Hero() {
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
 
           <h1 class="mb-4 text-4xl font-extrabold tracking-tight drop-shadow-lg drop-shadow-teal-500 leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
-            <span class="">{heroCopy.title}</span>
+            <span class="text-white" style={{textShadow: "2.5px 2.5px black"}}>{heroCopy.title}</span>
           </h1>
-          <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-300">
+          <p class="mb-8 text-lg font-normal text-gray-300/70 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-300">
             {heroCopy.description}
           </p>
 
@@ -36,8 +36,8 @@ function Hero() {
               Learn more
             </a>
 
-            <a href="https://discord.gg/decentland" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-white hover:bg-gray-100  focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-white dark:hover:bg-slate-800 dark:focus:ring-gray-800">
-              <img class="object-scale-down w-6 h-6 mr-2" src={Discord} />
+            <a href="https://discord.gg/decentland" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white hover:text-gray-900 rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-white dark:hover:bg-slate-800 dark:focus:ring-gray-800">
+              <img class="object-scale-down w-6 h-6 mr-2 p-1 bg-blue-500 rounded-full" src={Discord} />
               Join Discord
             </a>
 
