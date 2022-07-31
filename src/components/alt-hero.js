@@ -4,6 +4,8 @@ import { dlLinks } from '../../src/constants'
 import EthLogo from '../assets/eth-white.png'
 import ArLogo from '../assets/ar.svg'
 import AvaxLogo from '../assets/avax.svg'
+import OpLogo from '../assets/optimism.png'
+import BscLogo from '../assets/bsc.png'
 import { DocumentTextIcon } from '@heroicons/react/outline'
 
 const heroCopy = {
@@ -18,7 +20,7 @@ function Hero() {
 
 
     <section class="bg-gradient-to-b from-slate-700 to-slate-800">
-      <div class="bg-gradient-to-b from-emerald-700 to-slate-800">
+      <div class="bg-gradient-to-b from-green-700 to-slate-800">
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
 
           <h1 class="mb-4 text-4xl font-extrabold tracking-tight drop-shadow-lg drop-shadow-teal-500 leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
@@ -43,17 +45,23 @@ function Hero() {
 
           </div>
 
-          <div class="px-4 mx-auto text-center md:max-w-screen-md lg:max-w-screen-lg lg:px-36">
+          <div class="px-4 mx-auto text-center md:max-w-screen-md lg:max-w-screen-lg lg:px-24">
             <span class="font-semibold text-white uppercase">MULTICHAIN</span>
             <div class="flex flex-wrap justify-center items-center mt-8 text-gray-500 sm:justify-between">
               <a href="#" class="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400">
-                <img class="w-15 h-20" src={ArLogo} />
+                <img class="w-12 h-16" src={ArLogo} />
               </a>
               <a href="#" class="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400">
-                <img class="slate-500 w-10 h-15" src={EthLogo} />
+                <img class="slate-500 w-7 h-11" src={EthLogo} />
               </a>
               <a href="#" class="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400">
-                <img class="w-15 h-20" src={AvaxLogo} />
+                <img class="w-10 h-15" src={AvaxLogo} />
+              </a>
+              <a href="#" class="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400">
+                <img class="w-10 h-15" src={OpLogo} />
+              </a>
+              <a href="#" class="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400">
+                <img class="w-10 h-15" src={BscLogo} />
               </a>
             </div>
           </div>

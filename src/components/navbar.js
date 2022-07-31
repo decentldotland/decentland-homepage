@@ -2,7 +2,6 @@ import Logo from '../assets/logo.png'
 
 /* This example requires Tailwind CSS v2.0+ */
 const navigation = [
-  { name: 'Home', href: '/' },
   { name: 'Ark', href: 'https://ark.decent.land' },
   { name: 'Docs', href: 'https://docs.decent.land' },
   { name: 'Blog', href: 'https://blog.decent.land'}
@@ -10,20 +9,19 @@ const navigation = [
 
 export default function Navbar() {
   return (
-    <header className="bg-emerald-700">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
-        <div className="w-full py-6 flex items-center justify-between border-b border-indigo-500 lg:border-none">
-          
+    <header className="bg-green-700">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6" aria-label="Top">
+        <div className="w-full py-1 flex items-center justify-between border-b border-emerald-900 lg:border-none">
           <div className="flex items-center">
             <a href="#">
-              <span className="sr-only">decent.land</span>
               <img
-                className="h-10 w-auto"
+                className="h-14 mr-2 w-auto"
                 src={Logo}
                 alt=""
               />
-             
+           
             </a>
+            <span className=" text-white flex items-center font-black mr-6">decent.land</span>
             <div className="hidden ml-10 space-x-8 lg:block">
               {navigation.map((link) => (
                 <a key={link.name} href={link.href} className="text-base font-medium text-white hover:text-indigo-50">
@@ -31,7 +29,9 @@ export default function Navbar() {
                 </a>
               ))}
             </div>
+           
           </div>
+      
           { /*
           <div className="ml-10 space-x-4">
             <a
@@ -49,6 +49,7 @@ export default function Navbar() {
           </div>
           */ } 
         </div>
+        <div className="w-full border-b border-emerald-900"></div>
         <div className="py-4 flex flex-wrap justify-center space-x-6 lg:hidden">
           {navigation.map((link) => (
             <a key={link.name} href={link.href} className="text-base font-medium text-white hover:text-indigo-50">
