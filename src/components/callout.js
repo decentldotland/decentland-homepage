@@ -8,7 +8,7 @@ export default function Callout() {
         <h2 style={{textShadow: "2.5px 2.5px black"}} class="mb-4 text-lg font-extrabold tracking-tight leading-none  md:text-5xl lg:text-6xl text-white">
           In beta: token-gated groups
         </h2>
-        <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-300">
+        <p class="mb-8 text-lg font-normal text-gray-100 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-100">
           Join the beta for token-gated Telegram communities on <a class="inline-flex underline" rel="noopener noreferrer" target="_blank" href="https://docs.decent.land/ark-protocol/supported-chains">all chains supported by Ark.</a>
         </p>
         <a href="https://discord.gg/decentland" rel="noopener noreferrer" target="_blank" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white hover:text-black rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-white dark:hover:bg-gray-700 dark:focus:ring-gray-800">

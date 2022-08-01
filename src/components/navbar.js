@@ -11,9 +11,9 @@ export default function Navbar() {
   return (
     <header className="bg-green-700">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6" aria-label="Top">
-        <div className="w-full py-1 flex items-center justify-between border-b border-emerald-900 lg:border-none">
+        <div className="w-full py-1 flex justify-between">
           <div className="flex items-center">
-            <a href="#">
+            <a href="/">
               <img
                 className="h-14 mr-2 w-auto"
                 src={Logo}
@@ -22,7 +22,7 @@ export default function Navbar() {
            
             </a>
             <span className=" text-white flex items-center font-black mr-6">decent.land</span>
-            <div className="hidden ml-10 space-x-8 lg:block">
+            <div className="hidden ml-10 space-x-12 lg:block">
               {navigation.map((link) => (
                 <a key={link.name} href={link.href} className="text-base font-medium text-white hover:text-indigo-50">
                   {link.name}
@@ -35,13 +35,13 @@ export default function Navbar() {
           { /*
           <div className="ml-10 space-x-4">
             <a
-              href="#"
+              
               className="inline-block bg-indigo-500 py-2 px-4 border border-transparent rounded-md text-base font-medium text-white hover:bg-opacity-75"
             >
               Sign in
             </a>
             <a
-              href="#"
+              
               className="inline-block bg-white py-2 px-4 border border-transparent rounded-md text-base font-medium text-indigo-600 hover:bg-indigo-50"
             >
               Sign up
@@ -49,7 +49,7 @@ export default function Navbar() {
           </div>
           */ } 
         </div>
-        <div className="w-full border-b border-emerald-900"></div>
+        <div className="w-full"></div>
         <div className="py-4 flex flex-wrap justify-center space-x-6 lg:hidden">
           {navigation.map((link) => (
             <a key={link.name} href={link.href} className="text-base font-medium text-white hover:text-indigo-50">

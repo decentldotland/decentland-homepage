@@ -103,7 +103,7 @@ export default function Features() {
               {ansFeatures.map((item) => (
                 <div key={item.id} className="relative">
                   <dt>
-                    <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-red-400 text-white">
+                    <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-emerald-400 text-white">
                       <item.icon className="h-6 w-6" aria-hidden="true" />
                     </div>
                     <p className="ml-16 text-lg leading-6 font-medium text-white">{item.name}</p>
@@ -137,7 +137,7 @@ export default function Features() {
                 {arkFeatures.map((item) => (
                   <div key={item.id} className="relative">
                     <dt>
-                      <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-red-400 text-white">
+                      <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-emerald-400 text-white">
                         <item.icon className="h-6 w-6" aria-hidden="true" />
                       </div>
                       <p className="ml-16 text-lg leading-6 font-medium text-white">{item.name}</p>
@@ -173,7 +173,7 @@ export default function Features() {
               {publicSquareFeatures.map((item) => (
                 <div key={item.id} className="relative">
                   <dt>
-                    <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-red-400 text-white">
+                    <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-emerald-400 text-white">
                       <item.icon className="h-6 w-6" aria-hidden="true" />
                     </div>
                     <p className="ml-16 text-lg leading-6 font-medium text-white">{item.name}</p>
