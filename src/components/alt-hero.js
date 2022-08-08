@@ -19,8 +19,8 @@ function Hero() {
   return (
 
 
-    <section class="bg-gradient-to-b from-slate-700 to-slate-800">
-      <div class="bg-gradient-to-b from-green-600 to-teal-900">
+    <section class="bg-gradient-to-b from-slate-700 to-purple-800">
+      <div class="bg-gradient-to-b from-gray-900 to-black">
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
 
           <h1 class="mb-4 text-4xl font-extrabold tracking-tight drop-shadow-lg drop-shadow-teal-500 leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
@@ -32,14 +32,14 @@ function Hero() {
 
 
 
-          <div class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-            <a href="https://docs.decent.land" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-green-600 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+          <div class="flex p-10 flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+            <a href="https://docs.decent.land" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-gray-100 hover:text-black focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
               <DocumentTextIcon class="mr-2 w-6 h-6" />
-              Learn more
+              Read the docs
             </a>
 
-            <a href="https://discord.gg/decentland" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white hover:text-gray-900 rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-white dark:hover:bg-white dark:focus:ring-gray-800">
-              <img class="object-scale-down w-6 h-6 mr-2 p-1 bg-blue-500 rounded-full" src={Discord} />
+            <a href="https://discord.gg/decentland" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white hover:text-gray-900 rounded-lg focus:ring-4 focus:ring-gray-100 dark:text-black bg-gradient-to-r from-green-500 to-emerald-500 dark:border-white dark:focus:ring-gray-800">
+              <img class="object-scale-down w-6 h-6 mr-2 p-1 bg-black rounded-full" src={Discord} />
               Join Discord
             </a>
 
