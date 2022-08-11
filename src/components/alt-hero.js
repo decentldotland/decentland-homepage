@@ -19,8 +19,8 @@ function Hero() {
   return (
 
 
-    <section class="bg-gradient-to-b from-slate-700 to-purple-800">
-      <div class="bg-gradient-to-b from-gray-900 to-black">
+    <section class="bg-gradient-to-bl from-gray-800/95 via-slate-900 to-black">
+      <div class="bg-gradient-to-b from-purple-500/5 to-black/20">
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
 
           <h1 class="mb-4 text-4xl font-extrabold tracking-tight drop-shadow-lg drop-shadow-teal-500 leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
