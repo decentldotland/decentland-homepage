@@ -9,7 +9,7 @@ const navigation = [
 
 export default function Navbar() {
   return (
-    <header className="bg-green-700">
+    <header className="bg-gray-900/95">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6" aria-label="Top">
         <div className="w-full py-1 flex justify-between">
           <div className="flex items-center">

@@ -10,7 +10,6 @@ function App() {
     <div>
       <div className="w-full">
         <Navbar />
-        <div className='border-b border-green-900'></div>
         <Hero />
       </div>
       <Features />
