@@ -76,7 +76,7 @@ const publicSquareFeatures = [
 
 export default function Features() {
   return (
-    <div className="py-16 bg-slate-900 overflow-hidden lg:py-24">
+    <div className="py-16 bg-gradient-to-b from-black via-teal-900 to-slate-900 overflow-hidden lg:py-24">
       <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
 
         <div className="relative">
