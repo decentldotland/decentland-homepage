@@ -4,7 +4,7 @@ import Logo from '../assets/logo.png'
 const navigation = [
   { name: 'Ark', href: 'https://ark.decent.land' },
   { name: 'Docs', href: 'https://docs.decent.land' },
-  { name: 'Blog', href: 'https://blog.decent.land'}
+  { name: 'Blog', href: 'https://mirror.xyz/decentdotland.eth'}
 ]
 
 export default function Navbar() {
