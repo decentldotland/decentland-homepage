@@ -1,6 +1,7 @@
 
 /* This example requires Tailwind CSS v2.0+ */
-import { LinkIcon, GlobeAltIcon, CubeTransparentIcon, UserAddIcon, CodeIcon, GiftIcon, LockClosedIcon } from '@heroicons/react/outline'
+import React, { useEffect, useState } from 'react';
+import { LinkIcon, GlobeAltIcon, CubeTransparentIcon, UserIcon, UserAddIcon, CodeIcon, GiftIcon, LockClosedIcon } from '@heroicons/react/outline'
 import AnsFeature from '../assets/ans-feature.png'
 import ArkFeature from '../assets/ark-feature.png'
 import LinkFeature from '../assets/link-feature.jpeg'
@@ -75,6 +76,29 @@ const publicSquareFeatures = [
 ]
 
 export default function Features() {
+
+
+  const [stats, setAnsStats] = useState([]);
+
+  useEffect(() => {
+    let mounted = true;
+    getAnsStats()
+      .then(items => {
+        if (mounted) {
+          setAnsStats(items)
+        }
+      })
+    return () => mounted = false;
+  }, [])
+
+
+  function getAnsStats() {
+    return fetch('https://ans-stats.decent.land/stats')
+      .then(response => response.json())
+  }
+
+
+
   return (
     <div className="py-16 bg-gradient-to-b from-black via-teal-900 to-slate-900 overflow-hidden lg:py-24">
       <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
@@ -98,6 +122,8 @@ export default function Features() {
             <p className="mt-3 text-lg text-gray-400">
               Arweave Name Services combines a decentralized domains and social metadata into a new protocol, built as the username layer of the permaweb.
             </p>
+
+            <div class="p-2 mb-0 flex bg-emerald-800 mt-3 text-md text-gray-100 rounded-md flex items-center"><p class="flex m-1 justify-center"><UserIcon className="mr-3 ml-1 flex justify-center m-1 h-5 w-5"/>ANS private beta underway with {stats.users_count} holders!</p></div>
 
             <dl className="mt-10 space-y-10">
               {ansFeatures.map((item) => (
