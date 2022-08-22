@@ -4,6 +4,7 @@ const navigation = {
     { name: 'ar.page', href: 'https://ar.page' },
     { name: 'Ark Protocol', href: 'https://ark.decent.land' },
     { name: 'Documentation', href: 'https://docs.decent.land' },
+    { name: 'Media Kit', href: 'https://github.com/decentldotland/media-kit' },
   ],
   social: [
     
