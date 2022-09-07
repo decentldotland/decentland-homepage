@@ -9,6 +9,7 @@ import Features from '../src/components/features'
 import Footer from '../src/components/footer'
 import LogoBar from './components/logo-bar'
 import Callout from './components/callout'
+import Roadmap from './components/roadmap'
 
 function App() {
   // const news = (
@@ -32,11 +33,13 @@ function App() {
               <Features />
               <LogoBar />
               <Callout />
+              <Footer />
             </div>
+            
           } />
           <Route path="/near" element={
             <div className="w-full h-screen bg-slate-800/95 text-white">
-              Hello Near!
+              <Roadmap />
             </div>
           } />
           <Route path="*" element={
@@ -47,7 +50,7 @@ function App() {
           } />
         </Routes>
       </Router>
-      <Footer />
+      
     </>
   );
 }
