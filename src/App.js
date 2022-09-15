@@ -37,7 +37,7 @@ function App() {
             </div>
             
           } />
-          <Route path="/near" element={
+          <Route path="/roadmap" element={
             <div className="w-full h-screen bg-slate-800/95 text-white">
               <Roadmap />
             </div>
