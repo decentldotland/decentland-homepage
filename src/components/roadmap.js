@@ -84,8 +84,10 @@ export function RoadmapPhase({ phase }) {
         <div className="mx-2">
           <div className={`text-white mt-3 block w-full overflow-hidden rounded-lg px-4 py-2 ${phase.color}`}>
             <div className="ml-4 relative max-w-sm">
-              <div className="font-medium mt-3 mb-5 text-white text-3xl" style={{ textShadow: "0.25px 0.7px, -0.25px 0.7px" }}>{phase.title}</div>
-              <span class={`${phase.badgeClass} absolute top-1.5 right-[7px] text-sm font-bold px-2.5 py-0.5 rounded`}>{phase.status}</span>
+              <div className="flex mt-3 mb-5 justify-between">
+                <div className="font-medium text-white text-3xl mr-1" style={{ textShadow: "0.25px 0.7px, -0.25px 0.7px" }}>{phase.title}</div>
+                <span class={`${phase.badgeClass} min-w-[120px] text-[13px] text-center font-bold px-2.5 pt-2 rounded max-h-[36px]`}>{phase.status}</span>
+              </div>
               <div className="whitespace-pre-wrap mb-4">{phase?.description}</div>
               <div className="ml-4 my-4">
                 <ul className="list-disc">
@@ -103,11 +105,11 @@ export function RoadmapPhase({ phase }) {
 export default function Roadmap() {
 
   return (
-    <div className="bg-slate-900">
-      <div>
-        <div className="grid place-items-center pb-20">
-          <div className="text-6xl mt-12 mb-4 font-bold m-4">The decent.land roadmap</div>
-          <div className="text-md">From open social to DAO tooling</div>
+    <div className="bg-slate-900 pt-2">
+      <div className="lg:scale-100 md:scale-[0.9] scale-[0.87] -mt-72 md:-mt-36 lg:mt-0">
+        <div className="grid md:place-items-center pb-20">
+          <div className="text-5xl md:text-6xl mt-12 mb-4 font-bold md:m-4 text-center">The decent.land roadmap</div>
+          <div className="text-[17px] text-center">From open social to DAO tooling</div>
 
           <roadmap className="mt-3 grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-1 sm:gap-x-6 lg:grid-cols-1 xl:gap-x-8">
             {phases.content.map((phase) => <RoadmapPhase phase={phase} />)}
