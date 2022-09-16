@@ -14,7 +14,7 @@ npm install && npm run start
  
 ## Helpful links
 ### WebApps/Dapps:
-- Decentland homepage: https://decent.land
+- decent.land homepage: https://decent.land
 - Arweave Name Service (ANS): https://ar.page
 - Ark Protocol: https://ark.decent.land
 - Permaweb Explorer: https://app.decent.land
