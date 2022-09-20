@@ -4,6 +4,7 @@ import Logo from '../assets/logo.png'
 const navigation = [
   { name: 'Ark', href: 'https://ark.decent.land' },
   { name: 'Docs', href: 'https://docs.decent.land' },
+  { name: 'Roadmap', href: '/roadmap'},
   { name: 'Blog', href: 'https://mirror.xyz/decentdotland.eth'}
 ]
 
@@ -22,7 +23,7 @@ export default function Navbar() {
            
             </a>
             <span className="hidden sm:block">
-              <span className="text-white flex items-center font-black mr-6">decent.land</span>
+              <span className="text-white flex items-center font-black mr-6"><a href="/">decent.land</a></span>
             </span>
             <div className="ml-10 space-x-12">
               {navigation.map((link) => (
