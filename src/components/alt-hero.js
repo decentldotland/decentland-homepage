@@ -40,7 +40,7 @@ function Hero() {
               <span class="lg:text-xl">Read the docs</span>
             </a>
 
-            <a href="https://discord.gg/decentland" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white hover:text-gray-900 rounded-lg focus:ring-4 focus:ring-gray-100 dark:text-black bg-gradient-to-r from-green-500 to-emerald-500 dark:border-white dark:focus:ring-gray-800">
+            <a href="https://discord.gg/decentland" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-black hover:text-gray-900 rounded-lg focus:ring-4 focus:ring-gray-100 dark:text-black bg-gradient-to-r from-green-500 to-emerald-500 dark:border-white dark:focus:ring-gray-800">
               <img class="object-scale-down w-6 h-6 mr-2 p-1 bg-black rounded-full" src={Discord} />
               <span class="lg:text-xl">Join the Discord</span>
             </a>
