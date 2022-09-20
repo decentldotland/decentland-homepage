@@ -6,6 +6,7 @@ import ArLogo from '../assets/ar.svg'
 import AvaxLogo from '../assets/avax.svg'
 import OpLogo from '../assets/optimism.png'
 import BscLogo from '../assets/bsc.png'
+import NearLogo from '../assets/near.png'
 import { DocumentTextIcon } from '@heroicons/react/outline'
 
 const heroCopy = {
@@ -56,13 +57,16 @@ function Hero() {
                 <img class="slate-500 w-7 h-11" src={EthLogo} />
               </a>
               <a  class="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400">
-                <img class="w-10 h-15" src={AvaxLogo} />
+                <img class="w-10 h-10" src={NearLogo} />
               </a>
               <a  class="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400">
                 <img class="w-10 h-15" src={OpLogo} />
               </a>
               <a  class="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400">
                 <img class="w-10 h-15" src={BscLogo} />
+              </a>
+              <a  class="mr-5 mb-5 lg:mb-0 hover:text-gray-800 dark:hover:text-gray-400">
+                <img class="w-10 h-15" src={AvaxLogo} />
               </a>
             </div>
           </div>
