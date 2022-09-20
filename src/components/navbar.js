@@ -4,8 +4,8 @@ import Logo from '../assets/logo.png'
 const navigation = [
   { name: 'Ark', href: 'https://ark.decent.land' },
   { name: 'Docs', href: 'https://docs.decent.land' },
-  { name: 'Roadmap', href: '/roadmap'},
-  { name: 'Blog', href: 'https://mirror.xyz/decentdotland.eth'}
+  { name: 'Blog', href: 'https://mirror.xyz/decentdotland.eth'},
+  { name: 'Roadmap', href: '/roadmap', classes: 'hover:transition-color hover:drop-shadow-[0_0px_20px_rgba(0,255,255,0.5)] text-yellow-500 border-solid pt-1 pb-1 pl-3 pr-3 rounded-lg border-yellow-700 border-2 hover:text-yellow-300 hover:border-yellow-600'},
 ]
 
 export default function Navbar() {
@@ -27,7 +27,7 @@ export default function Navbar() {
             </span>
             <div className="ml-10 space-x-12">
               {navigation.map((link) => (
-                <a key={link.name} href={link.href} className="text-base font-medium text-white hover:text-indigo-50">
+                <a key={link.name} href={link.href} className={`text-base font-medium text-white ${link.classes}`}>
                   {link.name}
                 </a>
               ))}
