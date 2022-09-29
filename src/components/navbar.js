@@ -14,9 +14,8 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6" aria-label="Top">
         <div className="w-full py-1 flex justify-between">
           <div className="flex items-center">
-            <a href="/">
+            <a href="/" className="h-14 sm:mr-2 w-14">
               <img
-                className="h-14 mr-2 w-auto"
                 src={Logo}
                 alt=""
               />
@@ -25,7 +24,7 @@ export default function Navbar() {
             <span className="hidden sm:block">
               <span className="text-white flex items-center font-black mr-6"><a href="/">decent.land</a></span>
             </span>
-            <div className="ml-10 space-x-12">
+            <div className="ml-2 sm:ml-10 space-x-6 sm:space-x-12">
               {navigation.map((link) => (
                 <a key={link.name} href={link.href} className={`text-base font-medium text-white ${link.classes}`}>
                   {link.name}
