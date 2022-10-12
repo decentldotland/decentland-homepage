@@ -1,5 +1,6 @@
 import Logo from '../assets/logo.png'
-
+import {MenuIcon} from '@heroicons/react/outline'
+import { useState } from 'react'
 /* This example requires Tailwind CSS v2.0+ */
 const navigation = [
   { name: 'Ark', href: 'https://ark.decent.land' },
@@ -9,6 +10,7 @@ const navigation = [
 ]
 
 export default function Navbar() {
+  const [toggle, setToggle] = useState(false)
   return (
     <header className="bg-gray-900/95">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6" aria-label="Top">
@@ -24,9 +26,20 @@ export default function Navbar() {
             <span className="hidden sm:block">
               <span className="text-white flex items-center font-black mr-6"><a href="/">decent.land</a></span>
             </span>
-            <div className="ml-2 sm:ml-10 space-x-6 sm:space-x-12">
+
+
+            <MenuIcon onClick={() => setToggle(!toggle)}
+              height={25} 
+              width={25} 
+              color={"white"} 
+              className="absolute right-1 w-14 cursor-pointer sm:hidden"/>
+
+          
+            <div className="ml-2 sm:ml-10 space-x-6 sm:space-x-12 hidden sm:block">
               {navigation.map((link) => (
-                <a key={link.name} href={link.href} className={`text-base font-medium text-white ${link.classes}`}>
+                <a key={link.name} 
+                  href={link.href} 
+                  className={`text-base font-medium text-white ${link.classes}`}>
                   {link.name}
                 </a>
               ))}
@@ -53,6 +66,29 @@ export default function Navbar() {
         </div>
         <div className="w-full"></div>
       </nav>
+      <div className='sm:hidden'>
+
+        {
+          toggle && (
+            
+            <div className='bg-[#1D2432] absolute
+                h-52 w-screen z-50'>
+                <div className="bg-gray-700 dark:bg-gray-600 h-[2px] w-full"></div>
+                <div className='px-10'>
+                  {navigation.map((link) => (
+                    <a key={link.name} 
+                      href={link.href} 
+                      className={`text-base font-medium 
+                        mt-4 
+                        text-white flex items-center justify-center ${link.classes}`}>
+                      {link.name}
+                    </a>
+                  ))}
+                </div>
+            </div>
+          )
+        }
+      </div>
     </header>
   )
 }

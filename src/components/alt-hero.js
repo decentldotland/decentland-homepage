@@ -24,8 +24,8 @@ function Hero() {
       <div class="bg-gradient-to-b from-purple-500/5 to-black/20">
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
 
-          <h1 class="mb-4 text-4xl font-extrabold tracking-tight drop-shadow-lg drop-shadow-teal-500 leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
-            <span class="text-white" style={{textShadow: "2.5px 2.5px black"}}>{heroCopy.title}</span>
+          <h1 class="mb-4 text-2xl font-extrabold tracking-tight drop-shadow-lg drop-shadow-teal-500 leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+            <span class="text-white " style={{textShadow: "2.5px 2.5px black"}}>{heroCopy.title}</span>
           </h1>
           <p class="mb-8 text-lg font-thin text-gray-100/70 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-100">
             {heroCopy.description}
