@@ -1,10 +1,11 @@
 
 /* This example requires Tailwind CSS v2.0+ */
 import React, { useEffect, useState } from 'react';
-import { LinkIcon, GlobeAltIcon, CubeTransparentIcon, UserIcon, UserAddIcon, CodeIcon, GiftIcon, LockClosedIcon } from '@heroicons/react/outline'
-import AnsFeature from '../assets/ans-feature.png'
+import { LinkIcon, GlobeAltIcon, CubeTransparentIcon, UserIcon, UserAddIcon, CodeIcon, GiftIcon, LockClosedIcon, PhotographIcon, ShareIcon } from '@heroicons/react/outline'
+import DameonLight from '../assets/dameonlight.jpeg'
+import DameonDark from '../assets/dameondark.jpeg'
+import AnsFeature2 from '../assets/ans-feature2.png'
 import ArkFeature from '../assets/ark-feature.png'
-import LinkFeature from '../assets/link-feature.jpeg'
 
 const ansCopy = {
   title: "Arweave Name Services (ANS)",
@@ -51,27 +52,27 @@ const arkFeatures = [
   },
 ]
 
-const publicSquareFeatures = [
+const arPageFeatures = [
   {
     id: 1,
-    name: 'Social graph',
+    name: 'img.arweave.dev + ar.page = Web3 Instagram',
     description:
-      'The relationships Public Square users have to each other and the dapps they use are queryable via the decent.land API',
-    icon: UserAddIcon,
+      'img.arweave.dev integration allows for an Instagram-like experience, and ar.page\'s support for cross-chain tokens lets users flex their collectibles. All, in one place.',
+    icon: PhotographIcon,
   },
   {
     id: 2,
-    name: 'Open, modular social',
+    name: 'Rich Social Metadata',
     description:
-      'dApps built on the Public Square protocol can choose to be public or token-gated, interlinked or siloed. ANS is the default username system, and cross-chain identity is managed by Ark.',
-    icon: CubeTransparentIcon,
+      'With 17+ protocols integrated and more to come, ar.page offers a rich profile-builder experience for ANS label holders.',
+    icon: UserAddIcon,
   },
   {
     id: 3,
-    name: 'Censorship-resistant',
+    name: 'Post Anywhere, Find Everything in One Place',
     description:
-      'decent.land protocols run on Arweave - a storage-focused blockchain with 200 years of data recall guaranteed. All decent.land code is open source, so even the APIs can be self-hosted.',
-    icon: LockClosedIcon,
+      'With aggregated feeds, you can post anywhere and find everything in one place. Consider ar.page the canonical source for all your social activity.',
+    icon: ShareIcon,
   },
 ]
 
@@ -97,7 +98,8 @@ export default function Features() {
       .then(response => response.json())
   }
 
-
+  const urlclass = "text-blue-400 hover:underline decoration-blue-600 hover:text-blue-600"
+  const hover = "hover:shadow-lime-300/50 hover:shadow-lg hover:-translate-y-2 ease-in-out duration-300 transition-all "
 
   return (
     <div className="py-16 bg-gradient-to-b from-black via-teal-900 to-slate-900 overflow-hidden lg:py-24">
@@ -115,6 +117,42 @@ export default function Features() {
         </div>
 
         <div className="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
+          <div className={`mt-10 mx-4 relative lg:mt-0 rounded-xl ${hover}`}>
+            <a href="https://dameon1.ar.page" className="" aria-hidden="true">
+              <img
+                className="relative mx-auto rounded-xl"
+                width={600}
+                src={DameonLight}
+                alt=""
+              />
+            </a>
+          </div>
+
+          <div className="relative">
+            <h3 className="text-2xl font-extrabold text-white tracking-tight sm:text-3xl">
+              ar.page
+            </h3>
+            <p className="mt-3 text-lg text-gray-400">
+              ar.page is a social profile powered by ANS and Ark Protocol that aggregates crosschain data from protocols like <a href="https://poap.xyz" className={urlclass}>POAPS</a>, <a href="https://rss3.io" className={urlclass}>RSS3</a>, <a href="https://stamps.arweave.dev/" className={urlclass}>Stamps</a>, and many more.
+            </p>
+
+            <dl className="mt-10 space-y-10">
+              {arPageFeatures.map((item) => (
+                <div key={item.id} className="relative">
+                  <dt>
+                    <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-emerald-400 text-white">
+                      <item.icon className="h-6 w-6" aria-hidden="true" />
+                    </div>
+                    <p className="ml-16 text-lg leading-6 font-medium text-white">{item.name}</p>
+                  </dt>
+                  <dd className="mt-2 ml-16 text-base text-gray-400">{item.description}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </div>
+
+        <div className="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
           <div className="relative">
             <h3 className="text-2xl font-extrabold text-white tracking-tight sm:text-3xl">
               ANS (Arweave Name Services)
@@ -123,7 +161,7 @@ export default function Features() {
               Arweave Name Services combines a decentralized domains and social metadata into a new protocol, built as the username layer of the permaweb.
             </p>
 
-            <div class="p-2 mb-0 flex bg-emerald-800 mt-3 text-md text-gray-100 rounded-md flex items-center"><p class="flex m-1 justify-center"><UserIcon className="mr-3 ml-1 flex justify-center m-1 h-5 w-5"/>ANS private beta underway with {stats.users_count} holders!</p></div>
+            <div class="p-2 mb-0 bg-emerald-800 mt-3 text-md text-gray-100 rounded-md flex items-center"><p class="flex m-1 justify-center"><UserIcon className="mr-3 ml-1 flex justify-center m-1 h-5 w-5"/>ANS private beta underway with {stats.users_count} holders!</p></div>
 
             <dl className="mt-10 space-y-10">
               {ansFeatures.map((item) => (
@@ -140,14 +178,14 @@ export default function Features() {
             </dl>
           </div>
 
-          <div className="mt-10 -mx-4 relative lg:mt-0" aria-hidden="true">
+          <a href="https://ar.page" className={`mt-10 -mx-4 relative lg:mt-0`} aria-hidden="true">
             <img
-              className="relative mx-auto"
+              className="relative mx-auto rounded-xl"
               width={490}
-              src={AnsFeature}
+              src={AnsFeature2}
               alt=""
             />
-          </div>
+          </a>
         </div>
 
 
@@ -174,50 +212,14 @@ export default function Features() {
               </dl>
             </div>
 
-            <div className="mt-10 -mx-4 relative lg:mt-0 lg:col-start-1">
-
+            <a href="https://ark.decent.land" className="mt-10 -mx-4 relative lg:mt-0 lg:col-start-1">
               <img
                 className="relative mx-auto"
                 width={490}
                 src={ArkFeature}
                 alt=""
               />
-            </div>
-          </div>
-        </div>
-
-        <div className="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
-          <div className="relative">
-            <h3 className="text-2xl font-extrabold text-white tracking-tight sm:text-3xl">
-              Public Square
-            </h3>
-            <p className="mt-3 text-lg text-gray-400">
-              The Public Square protocol is a framework for decentralized social media and social graphs, collating data from different chains.
-            </p>
-
-            <dl className="mt-10 space-y-10">
-              {publicSquareFeatures.map((item) => (
-                <div key={item.id} className="relative">
-                  <dt>
-                    <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-emerald-400 text-white">
-                      <item.icon className="h-6 w-6" aria-hidden="true" />
-                    </div>
-                    <p className="ml-16 text-lg leading-6 font-medium text-white">{item.name}</p>
-                  </dt>
-                  <dd className="mt-2 ml-16 text-base text-gray-400">{item.description}</dd>
-                </div>
-              ))}
-            </dl>
-          </div>
-
-          <div className="mt-10 -mx-4 relative lg:mt-0" aria-hidden="true">
-
-            <img
-              className="relative mx-auto"
-              width={600}
-              src={LinkFeature}
-              alt=""
-            />
+            </a>
           </div>
         </div>
 
