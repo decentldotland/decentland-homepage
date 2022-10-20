@@ -72,8 +72,8 @@ export default function Navbar() {
           toggle && (
             
             <div className='bg-[#1D2432] absolute
-                h-52 w-screen z-50'>
-                <div className="bg-gray-700 dark:bg-gray-600 h-[2px] w-full"></div>
+                h-52 w-full z-50'>
+                <div className="bg-gray-700 dark:bg-gray-600 h-[2px]"></div>
                 <div className='px-10'>
                   {navigation.map((link) => (
                     <a key={link.name} 
