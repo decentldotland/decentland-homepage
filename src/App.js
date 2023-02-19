@@ -10,17 +10,14 @@ import Footer from '../src/components/footer'
 import LogoBar from './components/logo-bar'
 import Callout from './components/callout'
 import Roadmap from './components/roadmap'
+import News from "./components/news"
 
 function App() {
-  // const news = (
-  //   <div className="bg-gray-900">
-  //     <div className="py-4 w-full bg-gradient-to-r from-purple-900/30 to-green-600/30 text-white text-bold text-2xl text-center">Our first official mint is now live! Get yourself a settler pass <a href="https://mint.decent.land" className="text-green-400 hover:text-green-400/40">here</a>!</div>
-  //   </div>
-  // )
 
   return (
     <>
       <div className="w-full">
+        <News />
         <Navbar />
       </div>
       <Router>
@@ -32,7 +29,7 @@ function App() {
               </div>
               <Features />
               <LogoBar />
-              <Callout />
+              {/* <Callout /> */}
               <Footer />
             </div>
             
