@@ -17,7 +17,7 @@ const ansFeatures = [
     id: 1,
     name: 'A versatile ID for the permaweb',
     description:
-      'ANS labels are portable, permanent domains with social metadata on Arweave. Holders will receive powerful benefits, and an ever-expanding toolbet of features.',
+      'ANS labels are portable, permanent domains with social metadata on Arweave. Holders will receive powerful benefits, and an ever-expanding toolbelt of features.',
     icon: UserGroupIcon,
   },
   {
