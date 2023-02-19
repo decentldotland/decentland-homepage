@@ -9,7 +9,7 @@ import ArkFeature from '../assets/ark-feature.png'
 
 const ansCopy = {
   title: "Arweave Name Services (ANS)",
-  description: "Arweave Names Service combines a decentralized domains naming service and a decentralized Gravatar-like protocol into a new protocol called ANS."
+  description: "Arweave Name Service (ANS) is a permanent, portable, social domain system built on Arweave. Pay once, own forever.",
 }
 
 const ansFeatures = [
@@ -31,7 +31,7 @@ const ansFeatures = [
     id: 3,
     name: 'Powered by EXM',
     description:
-      'EXM is a protocol that allows instant finality on the Arweave blockchain. No more waiting for 20 minutes!',
+      'EXM is a protocol that allows instant transactions Arweave. Waiting 20 minutes for a transaction to confirm is a thing of the past.',
     icon: LightningBoltIcon,
   },
 ]
