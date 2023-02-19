@@ -24,14 +24,14 @@ const ansFeatures = [
     id: 2,
     name: 'Built-in Marketplace',
     description:
-      'All labels are available for sale on the ANS marketplace. Buy and sell instantly with no fees thanks everpay integration.',
+      'All labels are available for sale on the ANS marketplace. Buy and sell instantly with no fees thanks to everpay.io integration.',
     icon: CashIcon,
   },
   {
     id: 3,
     name: 'Powered by EXM',
     description:
-      'EXM is a protocol that allows isntant finality on the Arweave blockchain. No more waiting for 20 minutes!',
+      'EXM is a protocol that allows instant finality on the Arweave blockchain. No more waiting for 20 minutes!',
     icon: LightningBoltIcon,
   },
 ]
