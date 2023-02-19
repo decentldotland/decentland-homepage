@@ -1,7 +1,7 @@
 
 /* This example requires Tailwind CSS v2.0+ */
 import React, { useEffect, useState } from 'react';
-import { LinkIcon, GlobeAltIcon, CubeTransparentIcon, UserIcon, UserAddIcon, CodeIcon, GiftIcon, LockClosedIcon, PhotographIcon, ShareIcon } from '@heroicons/react/outline'
+import { LinkIcon, ClockIcon, LightningBoltIcon, CubeTransparentIcon, UserIcon, UserAddIcon, CodeIcon, GiftIcon, LockClosedIcon, PhotographIcon, ShareIcon, UserGroupIcon, CashIcon } from '@heroicons/react/outline'
 import DameonLight from '../assets/dameonlight.jpeg'
 import DameonDark from '../assets/dameondark.jpeg'
 import AnsFeature2 from '../assets/ans-feature2.png'
@@ -15,24 +15,24 @@ const ansCopy = {
 const ansFeatures = [
   {
     id: 1,
-    name: 'Universal ID for the permaweb',
+    name: 'A versatile ID for the permaweb',
     description:
-      'ANS domains are portable username NFTs with social metadata on Arweave.',
-    icon: GlobeAltIcon,
+      'ANS labels are portable, permanent domains with social metadata on Arweave. Holders will receive powerful benefits, and an ever-expanding toolbet of features.',
+    icon: UserGroupIcon,
   },
   {
     id: 2,
-    name: 'Unique incentive mechanism',
+    name: 'Built-in Marketplace',
     description:
-      'ANS minting fees are distributed amongst holders as per the Proof of Radical algorithm',
-    icon: GiftIcon,
+      'All labels are available for sale on the ANS marketplace. Buy and sell instantly with no fees thanks everpay integration.',
+    icon: CashIcon,
   },
   {
     id: 3,
-    name: 'Pay once, own forever',
+    name: 'Powered by EXM',
     description:
-      'ANS domains don\'t expire, so it is not possible to lose control over your username. As NFTs, it is possible to buy, sell and trade them.',
-    icon: LockClosedIcon,
+      'EXM is a protocol that allows isntant finality on the Arweave blockchain. No more waiting for 20 minutes!',
+    icon: LightningBoltIcon,
   },
 ]
 const arkFeatures = [
@@ -82,24 +82,17 @@ export default function Features() {
   const [stats, setAnsStats] = useState([]);
 
   useEffect(() => {
-    let mounted = true;
-    getAnsStats()
-      .then(items => {
-        if (mounted) {
-          setAnsStats(items)
-        }
-      })
-    return () => mounted = false;
-  }, [])
-
-
-  function getAnsStats() {
-    return fetch('https://ans-stats.decent.land/stats')
+    fetch('https://vgwejldlj9ify3ezl9tw-9fhb0g-giud60fe-5q-_vi.exm.run/')
       .then(response => response.json())
-  }
+      .then(data => {
+        setAnsStats(data?.balances?.length);
+      });
+  })
 
   const urlclass = "text-blue-400 hover:underline decoration-blue-600 hover:text-blue-600"
   const hover = "hover:shadow-lime-300/50 hover:shadow-lg hover:-translate-y-2 ease-in-out duration-300 transition-all "
+  const hoverANS = "hover:shadow-blue-300/50 ihover:shadow-lg hover:-translate-y-2 ease-in-out duration-300 transition-all "
+  const hoverARK = "hover:-translate-y-2 ease-in-out duration-300 transition-all "
 
   return (
     <div className="py-16 bg-gradient-to-b from-black via-teal-900 to-slate-900 overflow-hidden lg:py-24">
@@ -130,7 +123,7 @@ export default function Features() {
 
           <div className="relative">
             <h3 className="text-2xl font-extrabold text-white tracking-tight sm:text-3xl">
-              ar.page
+              <a className="hover:underline" href="https://ar.page">ar.page</a>
             </h3>
             <p className="mt-3 text-lg text-gray-400">
               ar.page is a social profile powered by ANS and Ark Protocol that aggregates crosschain data from protocols like <a href="https://poap.xyz" className={urlclass}>POAPS</a>, <a href="https://rss3.io" className={urlclass}>RSS3</a>, <a href="https://stamps.arweave.dev/" className={urlclass}>Stamps</a>, and many more.
@@ -155,13 +148,13 @@ export default function Features() {
         <div className="relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
           <div className="relative">
             <h3 className="text-2xl font-extrabold text-white tracking-tight sm:text-3xl">
-              ANS (Arweave Name Services)
+              <a className="hover:underline" href="https://ans.gg">ANS (Arweave Name Services)</a>
             </h3>
             <p className="mt-3 text-lg text-gray-400">
               Arweave Name Services combines a decentralized domains and social metadata into a new protocol, built as the username layer of the permaweb.
             </p>
 
-            <div class="p-2 mb-0 bg-emerald-800 mt-3 text-md text-gray-100 rounded-md flex items-center"><p class="flex m-1 justify-center"><UserIcon className="mr-3 ml-1 flex justify-center m-1 h-5 w-5"/>ANS private beta underway with {stats.users_count} holders!</p></div>
+            <div class="p-2 mb-0 bg-emerald-800 mt-3 text-md text-gray-100 rounded-md flex items-center"><p class="flex m-1 justify-center"><UserIcon className="mr-3 ml-1 flex justify-center m-1 h-5 w-5"/>ANS public beta underway with {stats} holders!</p></div>
 
             <dl className="mt-10 space-y-10">
               {ansFeatures.map((item) => (
@@ -178,9 +171,9 @@ export default function Features() {
             </dl>
           </div>
 
-          <a href="https://ar.page" className={`mt-10 -mx-4 relative lg:mt-0`} aria-hidden="true">
+          <a href="https://ans.gg" className={`mt-10 -mx-4 relative lg:mt-0`} aria-hidden="true">
             <img
-              className="relative mx-auto rounded-xl"
+              className={`relative mx-auto rounded-xl ${hoverANS}`}
               width={490}
               src={AnsFeature2}
               alt=""
@@ -192,7 +185,9 @@ export default function Features() {
         <div className="relative mt-12 sm:mt-16 lg:mt-24">
           <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
             <div className="lg:col-start-2">
-              <h3 className="text-2xl font-extrabold text-white tracking-tight sm:text-3xl">Ark Protocol</h3>
+              <h3 className="text-2xl font-extrabold text-white tracking-tight sm:text-3xl">
+                <a className="hover:underline" href="https://ark.decent.land">Ark Protocol</a>
+              </h3>
               <p className="mt-3 text-lg text-gray-400">
                 Ark is an identity linking protocol which makes it possible for users on Arweave to verifiably attest they own a wallet (or DID) on another chain
               </p>
@@ -214,7 +209,7 @@ export default function Features() {
 
             <a href="https://ark.decent.land" className="mt-10 -mx-4 relative lg:mt-0 lg:col-start-1">
               <img
-                className="relative mx-auto"
+                className={`relative mx-auto ${hoverARK} rounded-lg`}
                 width={490}
                 src={ArkFeature}
                 alt=""
