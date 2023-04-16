@@ -227,17 +227,17 @@ export default function Features() {
             <img className="w-60 h-60 rounded-xl" src={ArkArt} />
             <div className="mt-10 md:mt-0 ">
               <p className="max-w-[400px] mb-8 text-gray-100 text-center md:text-left">
-                Decent.land is an ever-developing novel about an ancient nomadic civilization exploring the planet of Yowunas Maias, documenting their encounters with the fauna and the discoveries with the flora.
+                Decent.land is an ever-developing novel about an ancient nomadic civilization exploring a Decent Land, documenting their encounters with the fauna and the discoveries with the flora.
               </p>
               <div className="flex flex-col items-center md:items-start">
-                <a href="https://leetyrrell.medium.com/a-decent-land-chapter-one-ae611cdd4e08" className={urlclass}>
-                  Read more
+                <a target="_blank" href="https://leetyrrell.medium.com/a-decent-land-chapter-one-ae611cdd4e08" className={urlclass}>
+                  Read the story
                 </a>
-                <a href="https://mint.decent.land" className={urlclass}>
+                <a target="_blank" href="https://mint.decent.land" className={urlclass}>
                   Mint a settler pass NFT
                 </a>
-                <a href="https://twitter.com/DecentLandArt" className={urlclass}>
-                  Follow the story on Twitter
+                <a target="_blank" href="https://twitter.com/DecentLandArt" className={urlclass}>
+                  Follow the developments on Twitter
                 </a>
               </div>
             </div>
