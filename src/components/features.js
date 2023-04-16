@@ -6,6 +6,7 @@ import DameonLight from '../assets/dameonlight.jpeg'
 import DameonDark from '../assets/dameondark.jpeg'
 import AnsFeature2 from '../assets/ans-feature2.png'
 import ArkFeature from '../assets/ark-feature.png'
+import ArkArt from '../assets/ark-art.jpg'
 
 const ansCopy = {
   title: "Arweave Name Services (ANS)",
@@ -215,6 +216,31 @@ export default function Features() {
                 alt=""
               />
             </a>
+          </div>
+        </div>
+
+        <div className="relative mt-32">
+          <h2 className="text-center text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">
+            Explore the rich lore of decent.land
+          </h2>
+          <div className="flex flex-col md:flex-row gap-x-12 justify-center items-center mt-10">
+            <img className="w-60 h-60 rounded-xl" src={ArkArt} />
+            <div className="mt-10 md:mt-0 ">
+              <p className="max-w-[400px] mb-8 text-gray-100 text-center md:text-left">
+                Decent.land is an ever-developing novel about an ancient nomadic civilization exploring the planet of Yowunas Maias, documenting their encounters with the fauna and the discoveries with the flora.
+              </p>
+              <div className="flex flex-col items-center md:items-start">
+                <a href="https://leetyrrell.medium.com/a-decent-land-chapter-one-ae611cdd4e08" className={urlclass}>
+                  Read more
+                </a>
+                <a href="https://mint.decent.land" className={urlclass}>
+                  Mint a settler pass NFT
+                </a>
+                <a href="https://twitter.com/DecentLandArt" className={urlclass}>
+                  Follow the story on Twitter
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 

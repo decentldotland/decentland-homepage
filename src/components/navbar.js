@@ -3,6 +3,7 @@ import {MenuIcon} from '@heroicons/react/outline'
 import { useState } from 'react'
 /* This example requires Tailwind CSS v2.0+ */
 const navigation = [
+  { name: 'ANS', href: 'https://ans.gg' },
   { name: 'Ark', href: 'https://ark.decent.land' },
   { name: 'Docs', href: 'https://docs.decent.land' },
   { name: 'Blog', href: 'https://mirror.xyz/decentdotland.eth'},
@@ -35,7 +36,7 @@ export default function Navbar() {
               className="absolute right-1 w-14 cursor-pointer sm:hidden"/>
 
           
-            <div className="ml-2 sm:ml-10 space-x-6 sm:space-x-12 hidden sm:block">
+            <div className="ml-2 sm:ml-10 space-x-6 sm:space-x-12 hidden sm:block ">
               {navigation.map((link) => (
                 <a key={link.name} 
                   href={link.href} 
