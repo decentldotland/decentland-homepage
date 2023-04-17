@@ -227,7 +227,7 @@ export default function Features() {
             <img className="w-60 h-60 rounded-xl" src={ArkArt} />
             <div className="mt-10 md:mt-0 ">
               <p className="max-w-[400px] mb-8 text-gray-100 text-center md:text-left">
-                Decent.land is an ever-developing novel about an ancient nomadic civilization exploring a Decent Land, documenting their encounters with the fauna and the discoveries with the flora.
+              Decent Land is an ever-developing novel, which follows an ancient race exploring alien shores and offers a log of their discoveries. From weird and wonderful flora to the often dangerous fauna, all of their encounters are enshrined in these reports.
               </p>
               <div className="flex flex-col items-center md:items-start">
                 <a target="_blank" href="https://leetyrrell.medium.com/a-decent-land-chapter-one-ae611cdd4e08" className={urlclass}>
